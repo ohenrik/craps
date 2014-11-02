@@ -29,10 +29,14 @@ Or install it yourself as:
   ```
 
   Throw a single die with:
-  ```dice.roll```
+  ```
+  dice.roll
+  ```
 
   Throw multiple dice with: 
-  ```dice.roll(2)``` 
+  ```
+  dice.roll(2)
+  ``` 
 
 ## Probability
 
