@@ -16,13 +16,40 @@ Or install it yourself as:
 
     $ gem install craps
 
-## Usage
+##  Basic Usage
 
-  Instantiate a new six sided die with `dice = Dice.new(6)`. Alternatively use the subclass `die = D6.new`
+  Instantiate a new six sided die with:
+  ```
+  dice = Dice.new(6)
+  ``` 
 
-  Throw a single d6 die with `dice.roll`
+  Alternatively use the subclass:
+  ```
+  die = D6.new
+  ```
 
-  Throw multiple dice with dice.roll(2) 
+  Throw a single die with:
+  ```dice.roll```
+
+  Throw multiple dice with: 
+  ```dice.roll(2)``` 
+
+## Probability
+
+  To get the probability of throwing equal to or above a certain number on a die you can use the `higher_or_equal_to` method.
+  ```
+  # On a 6 sided dice it is 33.3% chance to get 5 or above:
+  dice.higher_or_equal_to(4)
+  # returns 0.33333333333333326 
+  ```
+
+  You can also do the oposite. Calculate the chanse to get equal to or bellow a certain number:
+  ```
+  # On a 6 sided dice it is 83.33333% chance to get 5 or bellow:
+  dice.lower_or_equal_to(4)
+  # returns 0.8333333333333334
+  ```
+
 
 ## Contributing
 

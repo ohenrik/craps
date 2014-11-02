@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Craps::VERSION
   spec.authors       = ["Ole Henrik Skogstrøm"]
   spec.email         = ["oleskogstrom@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
+  spec.description   = %q{This gem gives you a basic dice simulator along with some probability caltucations.}
   spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/ohenrik/craps"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
 end
