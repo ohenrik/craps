@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Ole Henrik Skogstrøm"]
   spec.email         = ["oleskogstrom@gmail.com"]
   spec.description   = %q{This gem gives you a basic dice simulator along with some probability caltucations.}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.summary       = %q{Basic dice roller. Also gives basic probability calculations.}
   spec.homepage      = "https://github.com/ohenrik/craps"
   spec.license       = "MIT"
 
