@@ -42,15 +42,15 @@ Or install it yourself as:
 
   To get the probability of throwing equal to or above a certain number on a die you can use the `higher_or_equal_to` method.
   ```
-  # On a 6 sided dice it is 33.3% chance to get 5 or above:
-  dice.higher_or_equal_to(4)
+  # On a 6 sided die there is a chance 33.3% to get 5 or above:
+  dice.higher_or_equal_to(5)
   # returns 0.33333333333333326 
   ```
 
   You can also do the oposite. Calculate the chanse to get equal to or bellow a certain number:
   ```
-  # On a 6 sided dice it is 83.33333% chance to get 5 or bellow:
-  dice.lower_or_equal_to(4)
+  # On a 6 sided die there is a 83.33333% chance to get 5 or bellow:
+  dice.lower_or_equal_to(5)
   # returns 0.8333333333333334
   ```
 
