@@ -10,9 +10,9 @@ module Craps
     end
 
     #Check how many dices that have been thrown in total
-    @@dices_thrown = 0
-    def self.dices_thrown
-        @@dices_thrown
+    @@dice_thrown = 0
+    def self.dice_thrown
+        @@dice_thrown
     end
 
     # Throw one or many times
@@ -20,23 +20,22 @@ module Craps
       result_array = []
       throw_times.times do |n|
         result_array[n] = rand(1..@sides)
-        @@dices_thrown += 1
+        @@dice_thrown += 1
       end
       # Both remember the result and return it.
       @last_result = result_array
     end
 
-
     # Some statistical helpers
     # Check what the probability is of getting equalt to or more than a given result.
     def base_prob
-      return (1/@sides)
+      return (1.0/@sides.to_f)
     end
 
     def higher_or_equal_to(numb)
       if valid_integer(numb)
         # Here we need to add 1/6 to get the correct result of "more than or equal"
-        1 - (numb.to_f/@sides.to_f) + (1.0/6.0)
+        1 - (numb.to_f/@sides.to_f) + (1.0/@sides.to_f)
       end
     end
 
@@ -46,6 +45,9 @@ module Craps
         (numb.to_f/@sides.to_f)
       end
     end
+
+    
+    private
 
     def valid_integer(numb)
       if numb.is_a? Integer
@@ -61,7 +63,7 @@ module Craps
       end
     end
 
-  end
+  end #end of Dice Class
 
   # A standard D6 dice for easier access
   class D6 < Dice

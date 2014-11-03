@@ -1,7 +1,23 @@
 require "spec_helper"
 
 module Craps 
+ 
   describe Dice do
+
+
+    describe "#dice_thrown" do
+      let(:thrown_times) { Craps::Dice.new(6) }
+
+      it "dice_thrown should be an integer" do
+        expect(Craps::Dice.dice_thrown).to be_an(Integer)
+      end
+
+      it "returns 0 times thrown for a new dice object" do
+        expect(Craps::Dice.dice_thrown).to eq(0)
+      end
+
+    end
+    
     describe "#roll" do
       let(:roll) { Craps::D6.new.roll(6) }
 
@@ -14,6 +30,8 @@ module Craps
       end
 
     end
+
+
   end
 
 end

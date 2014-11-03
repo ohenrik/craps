@@ -18,7 +18,12 @@ Or install it yourself as:
 
 ##  Basic Usage
 
-  Instantiate a new six sided die with:
+  First include Craps
+  ```
+  include Craps
+  ```
+
+  Then instantiate a new six sided die with:
   ```
   dice = Dice.new(6)
   ``` 
