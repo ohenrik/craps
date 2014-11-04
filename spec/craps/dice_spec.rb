@@ -19,14 +19,14 @@ module Craps
     end
     
     describe "#roll" do
-      let(:roll) { Craps::D6.new.roll(6) }
+      let(:dice) { Craps::D6.new }
 
       it "returns an integer" do
-        expect(roll).to be_a(Array)
+        expect(dice.roll(6).result).to be_a(Array)
       end
 
       it "Is the correct lenght" do
-        expect(roll.size).to eq(6)
+        expect(dice.roll(6).result.size).to eq(6)
       end
 
     end

@@ -2,8 +2,8 @@ module Craps
 
   class Dice
 
+    attr_reader :result
     attr_reader :sides
-    attr_reader :last_result
 
     def initialize(sides)
       @sides = sides
@@ -23,7 +23,27 @@ module Craps
         @@dice_thrown += 1
       end
       # Both remember the result and return it.
-      @last_result = result_array
+      @result = result_array
+      self
+    end
+
+    #return the roll result array
+    def result
+      @result
+    end
+
+    #def sum
+    #  result.inject(:+)
+    #end
+
+    # Above or equal to a given integer
+    def above(int=1)
+      result.select { |v| v >= int }
+    end
+
+    # Bellow or equal a given integer
+    def bellow(int=@sides)
+      result.select { |v| v <= int }
     end
 
     # Some statistical helpers

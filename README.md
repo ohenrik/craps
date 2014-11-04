@@ -20,6 +20,7 @@ Or install it yourself as:
 
   First include Craps
   ```
+  require 'craps'
   include Craps
   ```
 
@@ -30,7 +31,7 @@ Or install it yourself as:
 
   Alternatively use the subclass:
   ```
-  die = D6.new
+  dice = D6.new
   ```
 
   Throw a single die with:
@@ -43,7 +44,45 @@ Or install it yourself as:
   dice.roll(2)
   ``` 
 
+  To get the result array use `.result`
+  ```
+  dice.roll(12).result
+  # or 
+  deice.result # if dice has already been rolled.
+  ```
+
+## Thresholds and result manipulation
+
+  Returns results above a threshold
+  ```
+  def above(int)
+  ...
+  end
+
+  # chain on a roll or on the instance to get the latest result.
+
+  dice.roll(10).above(3)
+  # or
+  dice.above(3) #if already rolled.
+  ```
+  The same for bellow. Returns results bellow a threshold
+  ```
+  def bellow(int)
+  ...
+  end
+
+  To count the results just use `.count`
+  ```
+  dice.roll(10).above(3).count
+  ```
+
 ## Probability
+
+  For the probability of getting any one reuslt on a dice.
+  ```
+  # For a six sided dice
+  dice.base_prob
+  ```
 
   To get the probability of throwing equal to or above a certain number on a die you can use the `higher_or_equal_to` method.
   ```
@@ -58,7 +97,6 @@ Or install it yourself as:
   dice.lower_or_equal_to(5)
   # returns 0.8333333333333334
   ```
-
 
 ## Contributing
 
