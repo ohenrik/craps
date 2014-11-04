@@ -48,7 +48,7 @@ Or install it yourself as:
   ```
   dice.roll(12).result
   # or 
-  deice.result # if dice has already been rolled.
+  dice.result # if dice has already been rolled.
   ```
 
 ## Thresholds and result manipulation
@@ -70,6 +70,8 @@ Or install it yourself as:
   def bellow(int)
   ...
   end
+
+  ```
 
   To count the results just use `.count`
   ```
